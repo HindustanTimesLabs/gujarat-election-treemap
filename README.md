@@ -2,7 +2,7 @@
 - **Headline**: For 22 years, Gujarat has been a BJP stronghold. But it wasn’t always this way.
 - **Description**: Before the BJP’s dominance, Gujarat was a Congress bastion.
 - **Author**: Harry Stevens
-- **Date**: 25 October, 2017
+- **Date**: 26 October, 2017
 - **URL**: [http://www.hindustantimes.com/interactives/gujarat-assembly-election-results-history/](http://www.hindustantimes.com/interactives/gujarat-assembly-election-results-history/)
 
 ### About the data
