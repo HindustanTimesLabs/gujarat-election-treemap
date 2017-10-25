@@ -1,6 +1,9 @@
 body {
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+}
+
+.viz-wrapper {
+	font-family: "Open Sans", sans-serif;
 }
 
 #viz {
@@ -12,9 +15,10 @@ body {
 }
 
 #viz .cell-text {
-	/*text-shadow: -1px -1px 1px #ffffff, -1px 0px 1px #ffffff, -1px 1px 1px #ffffff, 0px -1px 1px #ffffff, 0px 1px 1px #ffffff, 1px -1px 1px #ffffff, 1px 0px 1px #ffffff, 1px 1px 1px #ffffff;*/
-	/*text-shadow: -3px -3px 1px #fff, -3px -2px 1px #fff, -3px -1px 1px #fff, -3px 0px 1px #fff, -3px 1px 1px #fff, -3px 2px 1px #fff, -3px 3px 1px #fff, -2px -3px 1px #fff, -2px -2px 1px #fff, -2px -1px 1px #fff, -2px 0px 1px #fff, -2px 1px 1px #fff, -2px 2px 1px #fff, -2px 3px 1px #fff, -1px -3px 1px #fff, -1px -2px 1px #fff, -1px -1px 1px #fff, -1px 0px 1px #fff, -1px 1px 1px #fff, -1px 2px 1px #fff, -1px 3px 1px #fff, 0px -3px 1px #fff, 0px -2px 1px #fff, 0px -1px 1px #fff, 0px 1px 1px #fff, 0px 2px 1px #fff, 0px 3px 1px #fff, 1px -3px 1px #fff, 1px -2px 1px #fff, 1px -1px 1px #fff, 1px 0px 1px #fff, 1px 1px 1px #fff, 1px 2px 1px #fff, 1px 3px 1px #fff, 2px -3px 1px #fff, 2px -2px 1px #fff, 2px -1px 1px #fff, 2px 0px 1px #fff, 2px 1px 1px #fff, 2px 2px 1px #fff, 2px 3px 1px #fff, 3px -3px 1px #fff, 3px -2px 1px #fff, 3px -1px 1px #fff, 3px 0px 1px #fff, 3px 1px 1px #fff, 3px 2px 1px #fff, 3px 3px 1px #fff;*/
 	text-anchor: middle;
+}
+#viz .cell-text.indian-national-congress, #viz .cell-text.bharatiya-janata-party {
+	fill: #fff;
 }
 
 #slider {
@@ -34,11 +38,18 @@ body {
 	display: none;
 }
 
-.legend {
+
+.legend, .chart-source {
 	margin: 0 auto;
 	display: table;
-	width: 768px;
+	width: 850px;
 	max-width: 100%;
+	margin-top: 10px;
+}
+.chart-source {
+	font-size: .8em;
+	color: #888;
+	
 }
 .legend-item, .legend-swatch, .legend-text {
 	display: inline-block;
@@ -81,26 +92,31 @@ body {
 }
 
 .related-wrapper {
-	margin-top: 200px;
+	margin-top: 40px;
 }
 h3.super {
-	font-family: "Open Sans", sans-serif;
+	margin-top: 40px;
   color: #e74c3c;
 }
 
 .button.play {
-	font-family: "Open Sans", sans-serif;
+	/*font-family: "Open Sans", sans-serif;*/
   /*border: 2px solid black;*/
-  padding: 10px;
-  border-radius: 5px;
+	padding: 10px;
+  color: #000;
+  border: 1px solid #eee;
+  box-shadow: 0 1px 2px rgba(0,0,0,.08);
+  cursor: pointer;
+  background: #fff;
   margin: 0 auto;
   display: table;
-  cursor: pointer;
-  font-size: 1.8em;
-  font-weight: bold;
+  border-radius: 5px;
 }
 .button.play:hover {
-	background: #eee;
+  border-color: #ccc;
+  border-bottom-color: #bbb;
+  box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  color: #666;
 }
 
 .help {
@@ -108,7 +124,7 @@ h3.super {
 	color: #888;
 	font-style: italic;
 	text-align: center;
-	font-family: "Open Sans", sans-serif;
+	/*font-family: "Open Sans", sans-serif;*/
 }
 
 .copy p {
@@ -116,6 +132,64 @@ h3.super {
 	margin-bottom: 10px;
 }
 
+
+
+#stacked {
+	margin: 0 auto;
+	display: table;
+}
+#stacked .axis {
+  font-family: "Open Sans", sans-serif;
+}
+#stacked .y.axis .domain {
+  display: none;
+}
+#stacked .txt {
+	text-anchor: middle;
+	font-size: .6em;
+}
+#stacked .txt-bharatiya-janata-party, #stacked .txt-indian-national-congress {
+	fill: #fff;
+}
+
+.toggle {
+	text-align: center;
+}
+.toggle-item {
+	display: inline-block;
+	padding: 10px;
+  color: #888;
+  border: 1px solid #eee;
+  box-shadow: 0 1px 2px rgba(0,0,0,.08);
+  cursor: pointer;
+  background: #fff;
+  margin: 10px -2px;
+}
+.toggle-item:hover {
+  border-color: #ccc;
+  border-bottom-color: #bbb;
+  box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  color: #666;
+}
+.toggle-item.active {
+  color: #3a403d;
+  background: #f0f0f0;
+  border-color: #ccc;
+  border-top-color: #bbb;
+  box-shadow: none;
+  cursor: default;
+}
+.toggle-item:first-of-type {
+	border-radius: 5px 0 0 5px;
+}
+.toggle-item:last-of-type {
+	border-radius: 0 5px 5px 0;
+}
+
+.viz-supertitle {
+	font-weight: bold;
+	font-size: 1.1em;
+}
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
@@ -135,11 +209,17 @@ h3.super {
 		max-width: 100%;
 		overflow-x: hidden;
 	}
-	.legend {
+	.legend, .chart-source {
 		padding: 0px 5px;
+	}
+
+	#stacked .txt {
+		font-size: .5em;
 	}
 }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
 }
+
+

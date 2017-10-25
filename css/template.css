@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "PT Serif", serif;
   color: #3a403d;
 }
 a {
@@ -66,7 +66,16 @@ a:hover, a:focus {
 }
 .titles-wrapper h2.byline {
   font-weight: normal;
-  font-size: 1em;
+  font-size: .9em;
+}
+.titles-wrapper h2.byline a {
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.titles-wrapper h2.byline a:hover {
+  color: #000;
+  text-decoration: underline;
 }
 .titles-wrapper h2.dateline {
   font-weight: normal;
@@ -81,7 +90,7 @@ a:hover, a:focus {
 /*COPY*/
 .copy {
   font-family: "PT Serif", serif;
-  max-width: 600px;
+  max-width: 500px;
   margin: 40px auto;
   font-size: 1.1em;
   line-height: 1.5em;
@@ -143,7 +152,7 @@ a:hover, a:focus {
 
 /*RELATED*/
 .related-wrapper {
-  max-width: 800px;
+  max-width: 850px;
   margin: 0 auto;
   display: table;
   margin-bottom: 40px;

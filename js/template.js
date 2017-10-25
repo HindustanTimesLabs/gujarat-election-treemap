@@ -1,6 +1,6 @@
 // meta tags
-var twitterStatus = '';
-var hashtags = '';
+var twitterStatus = 'For 22 years, Gujarat has been a BJP stronghold. But it wasn’t always this way.';
+var hashtags = 'htdata';
 
 $(document).ready(function(){
   // calc breakpoint
