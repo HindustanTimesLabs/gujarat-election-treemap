@@ -129,8 +129,7 @@ d3.json("data/tree.json", function(error, data) {
 
   function autoPlay(){
 
-    // playStep();
-    var interval = d3.interval(playStep, 1000)
+    var interval = d3.interval(playStep, 1500)
 
     $(document).on("mouseenter", "#viz", kill);
     $(document).on("click", ".play.playing", kill);
