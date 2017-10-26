@@ -42,8 +42,8 @@ body {
 .legend, .chart-source {
 	margin: 0 auto;
 	display: table;
-	width: 850px;
-	max-width: 100%;
+	width: 100%;
+  max-width: 850px;
 	margin-top: 10px;
 }
 .chart-source {
